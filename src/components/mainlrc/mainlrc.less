@@ -1,0 +1,85 @@
+.main-outher {
+	flex: 0 0 250px;
+	width: 250px;
+	height: 100%;
+	padding-right: 20px;
+	margin-left: 40px;
+
+	.ui-album-cover {
+		height: 185px;
+		width: 250px;
+		padding-top: 20px;
+
+		.ui-album-img {
+			width: 250px;
+			height: 185px;
+			display: table-cell;
+			vertical-align: middle;
+			text-align: center;
+
+			img {
+				max-height: 100%;
+				max-width: 100%;
+			}
+		}
+	}
+
+	.ui-player-lrc {
+		position: absolute;
+		top: 215px;
+		bottom: 0;
+		width: 250px;
+
+		.ks-scroll-view {
+			height: 100%;
+			overflow: scroll;
+			position: relative;
+			cursor: default;
+			outline: 0;
+			-webkit-tap-highlight-color: transparent;
+			-webkit-user-drag: none;
+			-ms-touch-action: none;
+			-ms-user-select: none;
+
+			.ks-scroll-view-content {
+				position: absolute;
+				left: 0;
+				top: 0;
+				min-height: 100%;
+				min-width: 100%;
+				width: 100%;
+				-webkit-user-drag: none;
+
+				ul {
+					padding: 0 10px;
+
+					li {
+						color: #333;
+						line-height: 22px;
+						text-align: center;
+						padding: 3px 10px;
+
+						&.ui-lrc-current {
+							color: #f60;
+							-webkit-transition-property: color;
+							-moz-transition-property: color;
+							-o-transition-property: color;
+							-ms-transition-property: color;
+							transition-property: color;
+							-webkit-transition-duration: 0.1s;
+							-moz-transition-duration: 0.1s;
+							-o-transition-duration: 0.1s;
+							-ms-transition-duration: 0.1s;
+							transition-duration: 0.1s;
+							-webkit-transition-timing-function: ease-in;
+							-moz-transition-timing-function: ease-in;
+							-o-transition-timing-function: ease-in;
+							-ms-transition-timing-function: ease-in;
+							transition-timing-function: ease-in;
+						}
+					}
+				}
+			}
+		}
+	}
+}

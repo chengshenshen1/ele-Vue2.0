@@ -1,0 +1,351 @@
+.main-body {
+	flex: 1 1 auto;
+	width: 100%;
+	height: 100%;
+
+	.main-page {
+		width: 100%;
+		height: 100%;
+		position: relative;
+
+		.playlist-header {
+			width: 100%;
+			height: 36px;
+			line-height: 36px;
+			padding-top: 9px;
+			border-bottom: 1px solid #ccc;
+			color: #aaa;
+			position: absolute;
+			top: 0;
+
+			.row-item-body {
+				box-sizing: border-box;
+				width: 100%;
+				display: flex;
+				padding-left: 72px;
+				padding-right: 110px;
+				-moz-user-select: none;
+				-webkit-user-select: none;
+				-ms-user-select: none;
+				user-select: none;
+
+				div {
+					flex: 1;
+					padding-right: 0.2%;
+					text-overflow: ellipsis;
+					white-space: nowrap;
+					overflow: hidden;
+				}
+			}
+		}
+
+		.playlist-body {
+			width: 100%;
+			position: absolute;
+			top: 46px;
+			bottom: 60px;
+			overflow-y: scroll;
+
+			.playlist {
+				position: absolute;
+				left: 0;
+				top: 0;
+				outline: 0;
+				min-height: 100%;
+				min-width: 100%;
+				width: 100%;
+
+				li {
+					width: 100%;
+					border-bottom: 1px solid #EBEBEB;
+
+					&:hover {
+						background-color: #F0F0F0;
+					}
+
+					.song-wrapper {
+						display: flex;
+						width: 100%;
+						height: 40px;
+						line-height: 41px;
+						color: #333;
+						background-color: #FFF;
+
+						&:hover {
+							.control span {
+								visibility: visible;
+							}
+
+							.sort em {
+								cursor: pointer;
+								display: block;
+								width: 18px;
+								height: 18px;
+								margin: 11px 9px;
+								overflow: hidden;
+								font-size: 0;
+								background: url("./play.png") no-repeat 0 0;
+
+								&:hover {
+									background-position: 0 -18px;
+								}
+							}
+						}
+
+						.checkbox {
+							flex: 0;
+							height: 16px;
+							padding: 12px 5px 12px 10px;
+							line-height: 0;
+
+							input {
+								vertical-align: middle;
+								cursor: pointer;
+								appearance: none;
+								-webkit-appearance: none;
+								width: 16px;
+								height: 16px;
+								margin: 0;
+								background: url("http://gtms03.alicdn.com/tps/i3/T1bMh.FxNXXXb_r3IF-72-730.png") no-repeat 0 0;
+								background-position: -1px -710px;
+
+								&:hover {
+									background-position: -19px -710px;
+								}
+
+								&:checked {
+									background-position: -37px -710px;
+								}
+							}
+						}
+
+						.sort {
+							flex: 0 0 36px;
+							width: 36px;
+							height: 41px;
+							text-align: center;
+
+							em {
+								font-style: normal;
+								font-family: Arial;
+								color: #aaa;
+
+								&.currentsong {
+									cursor: default!important;
+									display: block;
+									width: 12px;
+									height: 12px;
+									margin: 14px 0 14px 10px;
+									overflow: hidden;
+									font-size: 0;
+									background: url("http://gtms01.alicdn.com/tps/i1/T1X4JEFq8qXXXaYEA_-11-12.gif") no-repeat 0 0 !important;
+
+									&.isplaying {
+										background: url("./pause.png") no-repeat 0 0 !important;
+									}
+								}
+							}
+						}
+
+						.song {
+							width: 100%;
+							display: flex;
+							flex: 1;
+							overflow: hidden;
+							-moz-user-select: none;
+							-webkit-user-select: none;
+							-ms-user-select: none;
+							user-select: none;
+
+							.album,
+							.name,
+							.singer {
+								width: 33%;
+								flex: 1;
+								padding-right: 0.2%;
+
+								p {
+									width: 100%;
+									box-sizing: border-box;
+									padding-right: 5px;
+									text-overflow: ellipsis;
+									white-space: nowrap;
+									overflow: hidden;
+									color: #333;
+								}
+							}
+						}
+
+						.control {
+							display: flex;
+							flex: 0 0 110px;
+							width: 110px;
+							height: 40px;
+
+							span {
+								margin: 10px 9px 9px;
+								display: block;
+								width: 18px;
+								height: 18px;
+								flex: 1;
+								background-image: url("http://gtms03.alicdn.com/tps/i3/T1bMh.FxNXXXb_r3IF-72-730.png");
+								background-repeat: no-repeat;
+
+								&.like {
+									background-position: -28px -130px;
+								}
+
+								&.more {
+									background-position: 0 -473px;
+									visibility: hidden;
+								}
+
+								&.del {
+									background-position: 0 -491px;
+									visibility: hidden;
+								}
+							}
+						}
+
+						&:hover {
+							background-color: #F0F0F0;
+
+							.control span {
+								visibility: visible;
+
+								&.like {
+									background-position: 0 -155px;
+								}
+							}
+						}
+					}
+
+					.roam-wrapper {
+						height: 41px;
+						padding: 0 36px 0 65px;
+
+						.roam {
+							display: inline-block;
+							height: 30px;
+							width: 88px;
+							padding-left: 30px;
+							background: url("./roam.png") no-repeat 0 0;
+							color: #fff;
+							text-align: center;
+							line-height: 30px;
+							cursor: pointer;
+
+							&:hover {
+								background-position: 0 -30px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		.playlist-footer {
+			border-top: 1px solid #ccc;
+			height: 45px;
+			width: 100%;
+			position: absolute;
+			bottom: 0;
+			padding-top: 14px;
+			user-select: none;
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+
+			.all-control {
+				height: 30px;
+				width: 100%;
+				line-height: 30px;
+				position: relative;
+				padding-left: 38px;
+
+				.all-checkbox {
+					position: absolute;
+					left: 0;
+					height: 16px;
+					padding: 7px 10px;
+					line-height: 0;
+
+					input {
+						cursor: pointer;
+						width: 16px;
+						height: 16px;
+						margin: 0;
+						appearance: none;
+						-moz-appearance: none;
+						-webkit-appearance: none;
+						background: url("http://gtms03.alicdn.com/tps/i3/T1bMh.FxNXXXb_r3IF-72-730.png") no-repeat 0 0;
+						background-position: -1px -710px;
+
+						&:hover {
+							background-position: -19px -710px;
+						}
+
+						&:checked {
+							background-position: -37px -710px;
+						}
+					}
+				}
+
+				.all {
+					float: left;
+					height: 30px;
+					padding-right: 10px;
+					user-select: none;
+					-moz-user-select: none;
+					-webkit-user-select: none;
+					-ms-user-select: none;
+
+					a {
+						display: block;
+						text-indent: 38px;
+						cursor: pointer;
+						color: #333;
+						text-decoration: none;
+						background-image: url("http://gtms01.alicdn.com/tps/i1/T1Z8x_FEBXXXcvwvwe-420-106.png");
+						background-repeat: no-repeat;
+						width: 73px;
+						height: 30px;
+
+						&.del {
+							background-position: 0 0;
+
+							&:hover {
+								background-position: 0 -30px;
+							}
+						}
+
+						&.fav {
+							background-position: -150px 0;
+
+							&:hover {
+								background-position: -150px -30px;
+							}
+						}
+
+						&.add {
+							width: 120px;
+							background-position: -225px 0;
+
+							&:hover {
+								background-position: -225px -30px;
+							}
+						}
+
+						&.more {
+							background-position: -348px 0;
+
+							&:hover {
+								background-position: -348px -30px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

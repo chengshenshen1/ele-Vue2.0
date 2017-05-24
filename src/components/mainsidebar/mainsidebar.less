@@ -1,0 +1,156 @@
+.main-sidebar {
+	display: block;
+	flex: 0 0 190px;
+	width: 190px;
+	height: 100%;
+	padding: 0 10px;
+	margin-right: 30px;
+
+	.menu-outer {
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #ccc;
+
+		li {
+			-moz-user-select: none;
+			-webkit-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			height: 36px;
+
+			a {
+				display: block;
+				height: 36px;
+				line-height: 36px;
+				padding-left: 36px;
+				cursor: pointer;
+				border-radius: 4px;
+				margin: 0;
+				font-size: 100%;
+				vertical-align: baseline;
+				background: transparent;
+				position: relative;
+				color: #333;
+				text-decoration: none;
+				-webkit-transition: 0.3s ease;
+				-moz-transition: 0.3s ease;
+				-webkit-transition-property: background-color;
+				-moz-transition-property: background-color;
+
+				&:hover {
+					background-color: #F0F0F0;
+				}
+
+				i {
+					position: absolute;
+					background-image: url("http://gtms03.alicdn.com/tps/i3/T1bMh.FxNXXXb_r3IF-72-730.png");
+					background-repeat: no-repeat;
+					top: 9px;
+					left: 9px;
+					width: 19px;
+					height: 19px;
+
+					&.icon-pause {
+						background-position: 0 -358px;
+					}
+
+					&.iconPlay {
+						background: url("http://gtms01.alicdn.com/tps/i1/T1oHFEFwGeXXXYdLba-18-18.gif") no-repeat 0 0!important;
+					}
+
+					&.icon-history {
+						background-position: 0 -376px;
+					}
+
+					&.icon-myfav {
+						background-position: 0 -394px;
+					}
+				}
+			}
+		}
+	}
+
+	.collect-outer {
+		padding-top: 10px;
+
+		.collect-title {
+			height: 30px;
+			line-height: 30px;
+			position: relative;
+
+			h3 {
+				color: #aaa;
+			}
+
+			span {
+				position: absolute;
+				right: 0;
+				top: 6px;
+
+				a {
+					display: block;
+					width: 18px;
+					height: 18px;
+					cursor: pointer;
+					background-image: url("http://gtms03.alicdn.com/tps/i3/T1bMh.FxNXXXb_r3IF-72-730.png");
+					background-repeat: no-repeat;
+
+					&.icon-addCollect {
+						background-position: 0 -412px;
+					}
+				}
+			}
+		}
+	}
+
+	.collect-list {
+		position: absolute;
+		bottom: 120px;
+		top: 169px;
+		width: 190px;
+		overflow: hidden;
+
+		.ks-scroll-view {
+			height: 100%;
+			overflow: hidden;
+			position: relative;
+			cursor: default;
+			outline: 0;
+			-webkit-tap-highlight-color: transparent;
+			-webkit-user-drag: none;
+			-ms-touch-action: none;
+			-ms-user-select: none;
+
+			.ks-scroll-view-content {
+				transform: translateX(0px) translateY(0px) translateZ(0px);
+				position: absolute;
+				left: 0;
+				top: 0;
+				min-height: 100%;
+				min-width: 100%;
+				width: 100%;
+				-webkit-user-drag: none;
+
+				.collect-none {
+					width: 185px;
+					height: 89px;
+					margin: 0 auto;
+					background: url("http://gtms04.alicdn.com/tps/i4/T11aF_Fx4aXXcxTH6l-185-89.png") no-repeat 0 0;
+				}
+			}
+		}
+	}
+
+	.promotion-block {
+		position: absolute;
+		bottom: 10px;
+
+		a {
+			margin: 0;
+			padding: 0;
+			font-size: 100%;
+			vertical-align: baseline;
+			background: transparent;
+		}
+	}
+}
